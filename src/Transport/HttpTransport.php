@@ -1,6 +1,6 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Transport;
+namespace ItStably\Clickhouse\Transport;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
@@ -8,14 +8,14 @@ use GuzzleHttp\Pool;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\ResponseInterface;
-use Tinderbox\Clickhouse\Common\TempTable;
-use Tinderbox\Clickhouse\Exceptions\TransportException;
-use Tinderbox\Clickhouse\Interfaces\FileInterface;
-use Tinderbox\Clickhouse\Interfaces\TransportInterface;
-use Tinderbox\Clickhouse\Query;
-use Tinderbox\Clickhouse\Query\QueryStatistic;
-use Tinderbox\Clickhouse\Query\Result;
-use Tinderbox\Clickhouse\Server;
+use ItStably\Clickhouse\Common\TempTable;
+use ItStably\Clickhouse\Exceptions\TransportException;
+use ItStably\Clickhouse\Interfaces\FileInterface;
+use ItStably\Clickhouse\Interfaces\TransportInterface;
+use ItStably\Clickhouse\Query;
+use ItStably\Clickhouse\Query\QueryStatistic;
+use ItStably\Clickhouse\Query\Result;
+use ItStably\Clickhouse\Server;
 
 /**
  * Http transport to perform queries.
@@ -264,7 +264,7 @@ class HttpTransport implements TransportInterface
     /**
      * Parse temp table data to append it to request.
      *
-     * @param \Tinderbox\Clickhouse\Common\TempTable $table
+     * @param \ItStably\Clickhouse\Common\TempTable $table
      *
      * @return array
      */
@@ -281,7 +281,7 @@ class HttpTransport implements TransportInterface
     /**
      * Assembles string from TempTable structure.
      *
-     * @param \Tinderbox\Clickhouse\Common\TempTable $table
+     * @param \ItStably\Clickhouse\Common\TempTable $table
      *
      * @return string
      */
@@ -334,7 +334,7 @@ class HttpTransport implements TransportInterface
      * @param Query                               $query
      * @param \Psr\Http\Message\ResponseInterface $response
      *
-     * @return \Tinderbox\Clickhouse\Query\Result
+     * @return \ItStably\Clickhouse\Query\Result
      */
     protected function assembleResult(Query $query, ResponseInterface $response): Result
     {
@@ -359,7 +359,7 @@ class HttpTransport implements TransportInterface
     /**
      * Builds uri with necessary params.
      *
-     * @param \Tinderbox\Clickhouse\Server $server
+     * @param \ItStably\Clickhouse\Server $server
      * @param array                        $query
      * @param array                        $settings
      *

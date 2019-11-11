@@ -1,13 +1,13 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace ItStably\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Common\ServerOptions;
+use ItStably\Clickhouse\Common\ServerOptions;
 
 /**
- * @covers \Tinderbox\Clickhouse\Server
- * @use \Tinderbox\Clickhouse\Common\ServerOptions
+ * @covers \ItStably\Clickhouse\Server
+ * @use \ItStably\Clickhouse\Common\ServerOptions
  */
 class ServerTest extends TestCase
 {

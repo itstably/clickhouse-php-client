@@ -1,12 +1,12 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace ItStably\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Common\Sanitizer;
+use ItStably\Clickhouse\Common\Sanitizer;
 
 /**
- * @covers \Tinderbox\Clickhouse\Common\Sanitizer
+ * @covers \ItStably\Clickhouse\Common\Sanitizer
  */
 class SanitizerTest extends TestCase
 {

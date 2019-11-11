@@ -1,6 +1,6 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Common;
+namespace ItStably\Clickhouse\Common;
 
 /**
  * Helper to escape value before it bound in query.

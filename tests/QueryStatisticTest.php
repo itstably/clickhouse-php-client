@@ -1,13 +1,13 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace ItStably\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Exceptions\QueryStatisticException;
-use Tinderbox\Clickhouse\Query\QueryStatistic;
+use ItStably\Clickhouse\Exceptions\QueryStatisticException;
+use ItStably\Clickhouse\Query\QueryStatistic;
 
 /**
- * @covers \Tinderbox\Clickhouse\Query\QueryStatistic
+ * @covers \ItStably\Clickhouse\Query\QueryStatistic
  */
 class QueryStatisticTest extends TestCase
 {

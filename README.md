@@ -1,5 +1,4 @@
 # Clickhouse Client
-[![Build Status](https://travis-ci.org/the-tinderbox/ClickhouseClient.svg?branch=master&200)](https://travis-ci.org/the-tinderbox/ClickhouseClient) [![Coverage Status](https://coveralls.io/repos/github/the-tinderbox/ClickhouseClient/badge.svg?branch=master&200)](https://coveralls.io/github/the-tinderbox/ClickhouseClient?branch=master)
 
 Package was written as client for [Clickhouse](https://clickhouse.yandex/).
 
@@ -13,7 +12,7 @@ Client uses [Guzzle](https://github.com/guzzle/guzzle) for sending Http requests
 Composer
 
 ```bash
-composer require the-tinderbox/clickhouse-php-client
+composer require itstably/clickhouse-php-client
 ```
 
 # Usage
@@ -23,16 +22,16 @@ Client works with alone server and cluster. Also, client can make async select a
 ## Alone server
 
 ```php
-$server = new Tinderbox\Clickhouse\Server('127.0.0.1', '8123', 'default', 'user', 'pass');
-$serverProvider = (new Tinderbox\Clickhouse\ServerProvider())->addServer($server);
+$server = new ItStably\Clickhouse\Server('127.0.0.1', '8123', 'default', 'user', 'pass');
+$serverProvider = (new ItStably\Clickhouse\ServerProvider())->addServer($server);
 
-$client = new Tinderbox\Clickhouse\Client($serverProvider);
+$client = new ItStably\Clickhouse\Client($serverProvider);
 ```
 
 ## Cluster
 
 ```php
-$testCluster = new Tinderbox\Clickhouse\Cluster('cluster-name', [
+$testCluster = new ItStably\Clickhouse\Cluster('cluster-name', [
     'server-1' => [
         'host' => '127.0.0.1',
         'port' => '8123',
@@ -40,10 +39,10 @@ $testCluster = new Tinderbox\Clickhouse\Cluster('cluster-name', [
         'user' => 'user',
         'password' => 'pass'
     ],
-    'server-2' => new Tinderbox\Clickhouse\Server('127.0.0.1', '8124', 'default', 'user', 'pass')
+    'server-2' => new ItStably\Clickhouse\Server('127.0.0.1', '8124', 'default', 'user', 'pass')
 ]);
 
-$anotherCluster = new Tinderbox\Clickhouse\Cluster('cluster-name', [
+$anotherCluster = new ItStably\Clickhouse\Cluster('cluster-name', [
     [
         'host' => '127.0.0.1',
         'port' => '8125',
@@ -51,12 +50,12 @@ $anotherCluster = new Tinderbox\Clickhouse\Cluster('cluster-name', [
         'user' => 'user',
         'password' => 'pass'
     ],
-    new Tinderbox\Clickhouse\Server('127.0.0.1', '8126', 'default', 'user', 'pass')
+    new ItStably\Clickhouse\Server('127.0.0.1', '8126', 'default', 'user', 'pass')
 ]);
 
-$serverProvider = (new Tinderbox\Clickhouse\ServerProvider())->addCluster($testCluster)->addCluster($anotherCluster);
+$serverProvider = (new ItStably\Clickhouse\ServerProvider())->addCluster($testCluster)->addCluster($anotherCluster);
 
-$client = (new Tinderbox\Clickhouse\Client($serverProvider));
+$client = (new ItStably\Clickhouse\Client($serverProvider));
 ```
 
 Before execute any query on cluster, you should provide cluster name and client will run all queries on specified cluster.
@@ -213,14 +212,14 @@ $client->write([
 ]);
 
 $client->writeFiles('table', ['date', 'column'], [
-    new Tinderbox\Clickhouse\Common\File('/file-1.csv'),
-    new Tinderbox\Clickhouse\Common\File('/file-2.csv')
+    new ItStably\Clickhouse\Common\File('/file-1.csv'),
+    new ItStably\Clickhouse\Common\File('/file-2.csv')
 ]);
 
 $client->insertFiles('table', ['date', 'column'], [
-    new Tinderbox\Clickhouse\Common\File('/file-1.tsv'),
-    new Tinderbox\Clickhouse\Common\File('/file-2.tsv')
-], Tinderbox\Clickhouse\Common\Format::TSV);
+    new ItStably\Clickhouse\Common\File('/file-1.tsv'),
+    new ItStably\Clickhouse\Common\File('/file-2.tsv')
+], ItStably\Clickhouse\Common\Format::TSV);
 ```
 
 In case of `writeFiles` queries executes asynchronously. If you have butch of files and you want to insert them in one insert query, you can

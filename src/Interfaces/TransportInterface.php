@@ -1,9 +1,9 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Interfaces;
+namespace ItStably\Clickhouse\Interfaces;
 
-use Tinderbox\Clickhouse\Query;
-use Tinderbox\Clickhouse\Query\Result;
+use ItStably\Clickhouse\Query;
+use ItStably\Clickhouse\Query\Result;
 
 /**
  * Interface describes transport.

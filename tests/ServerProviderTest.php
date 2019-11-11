@@ -1,12 +1,12 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace ItStably\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Exceptions\ServerProviderException;
+use ItStably\Clickhouse\Exceptions\ServerProviderException;
 
 /**
- * @covers \Tinderbox\Clickhouse\ServerProvider
+ * @covers \ItStably\Clickhouse\ServerProvider
  */
 class ServerProviderTest extends TestCase
 {

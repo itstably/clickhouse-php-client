@@ -1,15 +1,15 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace ItStably\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Common\File;
-use Tinderbox\Clickhouse\Common\Format;
-use Tinderbox\Clickhouse\Common\TempTable;
+use ItStably\Clickhouse\Common\File;
+use ItStably\Clickhouse\Common\Format;
+use ItStably\Clickhouse\Common\TempTable;
 
 /**
- * @covers \Tinderbox\Clickhouse\Common\AbstractFile
- * @covers \Tinderbox\Clickhouse\Common\TempTable
+ * @covers \ItStably\Clickhouse\Common\AbstractFile
+ * @covers \ItStably\Clickhouse\Common\TempTable
  */
 class TempTableTest extends TestCase
 {

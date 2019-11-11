@@ -1,9 +1,9 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Query;
+namespace ItStably\Clickhouse\Query;
 
-use Tinderbox\Clickhouse\Exceptions\ResultException;
-use Tinderbox\Clickhouse\Query;
+use ItStably\Clickhouse\Exceptions\ResultException;
+use ItStably\Clickhouse\Query;
 
 /**
  * Query result.
@@ -19,7 +19,7 @@ class Result implements \ArrayAccess, \Iterator, \Countable
     /**
      * Query execution statistic.
      *
-     * @var \Tinderbox\Clickhouse\Query\QueryStatistic
+     * @var \ItStably\Clickhouse\Query\QueryStatistic
      */
     protected $statistic;
 
@@ -49,7 +49,7 @@ class Result implements \ArrayAccess, \Iterator, \Countable
      *
      * @param Query                                      $query
      * @param array                                      $rows
-     * @param \Tinderbox\Clickhouse\Query\QueryStatistic $statistic
+     * @param \ItStably\Clickhouse\Query\QueryStatistic $statistic
      */
     public function __construct(Query $query, array $rows, QueryStatistic $statistic)
     {
@@ -71,7 +71,7 @@ class Result implements \ArrayAccess, \Iterator, \Countable
     /**
      * Sets statistic.
      *
-     * @param \Tinderbox\Clickhouse\Query\QueryStatistic $statistic
+     * @param \ItStably\Clickhouse\Query\QueryStatistic $statistic
      */
     protected function setStatistic(QueryStatistic $statistic)
     {
@@ -111,7 +111,7 @@ class Result implements \ArrayAccess, \Iterator, \Countable
     /**
      * Returns statistic.
      *
-     * @return \Tinderbox\Clickhouse\Query\QueryStatistic
+     * @return \ItStably\Clickhouse\Query\QueryStatistic
      */
     public function getStatistic(): QueryStatistic
     {
@@ -123,7 +123,7 @@ class Result implements \ArrayAccess, \Iterator, \Countable
      *
      * @param string $name
      *
-     * @throws \Tinderbox\Clickhouse\Exceptions\ResultException
+     * @throws \ItStably\Clickhouse\Exceptions\ResultException
      *
      * @return mixed
      */

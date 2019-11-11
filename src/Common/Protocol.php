@@ -1,6 +1,6 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Common;
+namespace ItStably\Clickhouse\Common;
 
 abstract class Protocol
 {

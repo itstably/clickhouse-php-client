@@ -1,13 +1,13 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace ItStably\Clickhouse;
 
 use PHPUnit\Framework\TestCase;
-use Tinderbox\Clickhouse\Common\MergedFiles;
+use ItStably\Clickhouse\Common\MergedFiles;
 
 /**
- * @covers \Tinderbox\Clickhouse\Common\AbstractFile
- * @covers \Tinderbox\Clickhouse\Common\MergedFiles
+ * @covers \ItStably\Clickhouse\Common\AbstractFile
+ * @covers \ItStably\Clickhouse\Common\MergedFiles
  */
 class MergeFilesStreamTest extends TestCase
 {

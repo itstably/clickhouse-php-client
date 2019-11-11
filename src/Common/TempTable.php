@@ -1,9 +1,9 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Common;
+namespace ItStably\Clickhouse\Common;
 
 use Psr\Http\Message\StreamInterface;
-use Tinderbox\Clickhouse\Interfaces\FileInterface;
+use ItStably\Clickhouse\Interfaces\FileInterface;
 
 /**
  * Temporary table for select requests which receives data from local file.

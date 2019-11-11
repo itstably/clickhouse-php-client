@@ -1,6 +1,6 @@
 <?php
 
-namespace Tinderbox\Clickhouse\Exceptions;
+namespace ItStably\Clickhouse\Exceptions;
 
 /**
  * @codeCoverageIgnore

@@ -1,5 +1,5 @@
 {
-  "name": "the-tinderbox/clickhouse-php-client",
+  "name": "itstably/clickhouse-php-client",
   "description": "Clickhouse client over HTTP",
   "authors": [
     {
@@ -9,12 +9,12 @@
   ],
   "autoload": {
     "psr-4": {
-      "Tinderbox\\Clickhouse\\": "src"
+      "ItStably\\Clickhouse\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Tinderbox\\Clickhouse\\": "tests"
+      "ItStably\\Clickhouse\\": "tests"
     }
   },
   "require": {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace ItStably\Clickhouse;
 
-use Tinderbox\Clickhouse\Common\File;
-use Tinderbox\Clickhouse\Common\Format;
-use Tinderbox\Clickhouse\Interfaces\FileInterface;
-use Tinderbox\Clickhouse\Interfaces\TransportInterface;
-use Tinderbox\Clickhouse\Query\Result;
-use Tinderbox\Clickhouse\Transport\HttpTransport;
+use ItStably\Clickhouse\Common\File;
+use ItStably\Clickhouse\Common\Format;
+use ItStably\Clickhouse\Interfaces\FileInterface;
+use ItStably\Clickhouse\Interfaces\TransportInterface;
+use ItStably\Clickhouse\Query\Result;
+use ItStably\Clickhouse\Transport\HttpTransport;
 
 /**
  * Client.
@@ -45,8 +45,8 @@ class Client
     /**
      * Client constructor.
      *
-     * @param \Tinderbox\Clickhouse\ServerProvider                     $serverProvider
-     * @param \Tinderbox\Clickhouse\Interfaces\TransportInterface|null $transport
+     * @param \ItStably\Clickhouse\ServerProvider                     $serverProvider
+     * @param \ItStably\Clickhouse\Interfaces\TransportInterface|null $transport
      */
     public function __construct(
         ServerProvider $serverProvider,
@@ -69,7 +69,7 @@ class Client
     /**
      * Sets transport.
      *
-     * @param \Tinderbox\Clickhouse\Interfaces\TransportInterface|null $transport
+     * @param \ItStably\Clickhouse\Interfaces\TransportInterface|null $transport
      */
     protected function setTransport(TransportInterface $transport = null)
     {
@@ -207,7 +207,7 @@ class Client
      * @param FileInterface[] $files
      * @param array           $settings
      *
-     * @return \Tinderbox\Clickhouse\Query\Result
+     * @return \ItStably\Clickhouse\Query\Result
      */
     public function readOne(string $query, array $files = [], array $settings = []): Result
     {
@@ -312,12 +312,12 @@ class Client
     /**
      * Creates query instance from specified arguments.
      *
-     * @param \Tinderbox\Clickhouse\Server $server
+     * @param \ItStably\Clickhouse\Server $server
      * @param string                       $sql
      * @param array                        $files
      * @param array                        $settings
      *
-     * @return \Tinderbox\Clickhouse\Query
+     * @return \ItStably\Clickhouse\Query
      */
     protected function createQuery(
         Server $server,
@@ -333,7 +333,7 @@ class Client
      *
      * @param array $query
      *
-     * @return \Tinderbox\Clickhouse\Query
+     * @return \ItStably\Clickhouse\Query
      */
     protected function guessQuery(array $query): Query
     {

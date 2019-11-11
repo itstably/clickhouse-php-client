@@ -1,8 +1,8 @@
 <?php
 
-namespace Tinderbox\Clickhouse;
+namespace ItStably\Clickhouse;
 
-use Tinderbox\Clickhouse\Exceptions\ClusterException;
+use ItStably\Clickhouse\Exceptions\ClusterException;
 
 /**
  * Cluster - is a container with many Server instances.
@@ -19,7 +19,7 @@ class Cluster
     /**
      * Servers in cluster.
      *
-     * @var \Tinderbox\Clickhouse\Server[]
+     * @var \ItStably\Clickhouse\Server[]
      */
     protected $servers = [];
 
@@ -42,9 +42,9 @@ class Cluster
      *
      * @param array $servers Each server can be provided as array or Server instance
      *
-     * @throws \Tinderbox\Clickhouse\Exceptions\ClusterException
+     * @throws \ItStably\Clickhouse\Exceptions\ClusterException
      *
-     * @return \Tinderbox\Clickhouse\Cluster
+     * @return \ItStably\Clickhouse\Cluster
      */
     public function addServers(array $servers): self
     {
@@ -75,9 +75,9 @@ class Cluster
      * Pushes one server to cluster.
      *
      * @param string                       $hostname
-     * @param \Tinderbox\Clickhouse\Server $server
+     * @param \ItStably\Clickhouse\Server $server
      *
-     * @throws \Tinderbox\Clickhouse\Exceptions\ClusterException
+     * @throws \ItStably\Clickhouse\Exceptions\ClusterException
      */
     public function addServer(string $hostname, Server $server)
     {
@@ -91,7 +91,7 @@ class Cluster
     /**
      * Returns servers in cluster.
      *
-     * @return \Tinderbox\Clickhouse\Server[]
+     * @return \ItStably\Clickhouse\Server[]
      */
     public function getServers(): array
     {
@@ -103,9 +103,9 @@ class Cluster
      *
      * @param string $hostname
      *
-     * @throws \Tinderbox\Clickhouse\Exceptions\ClusterException
+     * @throws \ItStably\Clickhouse\Exceptions\ClusterException
      *
-     * @return \Tinderbox\Clickhouse\Server
+     * @return \ItStably\Clickhouse\Server
      */
     public function getServerByHostname(string $hostname): Server
     {
